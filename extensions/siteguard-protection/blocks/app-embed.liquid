@@ -1,0 +1,32 @@
+{%- assign cfg = app.metafields.siteguard.config.value -%}
+<script>
+  (function () {
+    var raw = {{ cfg | json }} || {};
+    var p = raw.protection || {};
+    var ct = raw.country || {};
+    window.SG_RAW = raw;
+        window.SG_DEBUG = {
+      a: {{ app.metafields.siteguard.config.value | json }},
+      b: {{ app.metafields.siteguard.config | json }},
+      c: {{ app.metafields.siteguard | json }}
+    };
+    window.SG_CONFIG = {
+      rightClick: p.rightClick !== false,
+      textSelect: p.textSelect !== false,
+      images: p.images !== false,
+      shortcuts: p.shortcuts !== false,
+      country: "{{ localization.country.iso_code }}",
+      blocked: ct.enabled ? String(ct.codes || '').toUpperCase() : ''
+    };
+  })();
+</script>
+<link rel="stylesheet" href="{{ 'protect.css' | asset_url }}">
+<script src="{{ 'protect.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "SiteGuard Protection",
+  "target": "body",
+  "settings": []
+}
+{% endschema %}

@@ -1,0 +1,60 @@
+.sg-blocked {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+html.sg-lock { overflow: hidden; }
+
+.sg-age-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.sg-age-box {
+  background: #fff;
+  color: #111;
+  max-width: 420px;
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.sg-age-text { margin: 0 0 24px; font-size: 18px; line-height: 1.4; }
+.sg-btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+.sg-btn {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+.sg-btn-yes { background: #111; color: #fff; }
+.sg-btn-no { background: #e5e5e5; color: #111; }
+
+.sg-gdpr-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2147483646;
+  background: #111;
+  color: #fff;
+  padding: 14px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.sg-gdpr-bar .sg-btn-yes { background: #fff; color: #111; }
