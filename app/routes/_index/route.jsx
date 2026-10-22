@@ -1,5 +1,7 @@
 import { redirect, Form, useLoaderData } from "react-router";
+
 import { login } from "../../shopify.server";
+
 import styles from "./styles.module.css";
 
 export const loader = async ({ request }) => {
@@ -18,9 +20,11 @@ export default function App() {
   return (
     <div className={styles.index}>
       <div className={styles.content}>
-        <h1 className={styles.heading}>A short heading about [your app]</h1>
+        <h1 className={styles.heading}>SiteGuard Shield</h1>
         <p className={styles.text}>
-          A tagline about [your app] that describes your value proposition.
+          Protect your store content from copying. Block right-click, text
+          selection and image saving, restrict visitors by country, and show
+          cookie and age verification popups.
         </p>
         {showForm && (
           <Form className={styles.form} method="post" action="/auth/login">
@@ -36,16 +40,16 @@ export default function App() {
         )}
         <ul className={styles.list}>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Content protection</strong>. Disable right-click, text
+            selection, image drag and developer shortcuts.
           </li>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Country blocker</strong>. Block visitors from the
+            countries you choose.
           </li>
           <li>
-            <strong>Product feature</strong>. Some detail about your feature and
-            its benefit to your customer.
+            <strong>Popups</strong>. Add a GDPR cookie banner and an age
+            verification popup in a few clicks.
           </li>
         </ul>
       </div>

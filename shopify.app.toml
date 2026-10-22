@@ -2,7 +2,7 @@
 
 client_id = "8aad2f863562002b548905180dc54dca"
 name = "SiteGuard Shield"
-application_url = "https://example.com"
+application_url = "https://siteshield-virid.vercel.app"
 embedded = true
 
 [access_scopes]
@@ -45,7 +45,7 @@ api_version = "2027-01"
   topics = [ "app/scopes_update" ]
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [ "https://siteshield-virid.vercel.app/api/auth" ]
 
 [build]
-automatically_update_urls_on_dev = true
+automatically_update_urls_on_dev = false
